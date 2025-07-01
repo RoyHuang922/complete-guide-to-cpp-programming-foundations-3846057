@@ -4,11 +4,12 @@
 
 #include <iostream>
 #include <cstdint>
+#include <typeinfo>
 
 double my_average(int a, int8_t b, uint32_t c){
     double result = 0.0;
 
-    // Write your code here
+    result = (double)(a + b + c)/3;
     
     return result;
 }
@@ -20,6 +21,7 @@ int main(){
     double learnerResult = my_average(a, b, c);
     
     std::cout << "Your code returned: " << learnerResult << std::endl;
+    std::cout << "Your code type: " << typeid(learnerResult).name() << std::endl;
     
     std::cout << std::endl << std::endl;
     return 0;
